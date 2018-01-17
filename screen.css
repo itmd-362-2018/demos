@@ -15,12 +15,12 @@ html {
 }
 
 h1 {
-  font-size: 2.25em; /* 40.5 / 18 = 2.25 */
-  line-height: 1.0864em; /* 44 / 40.5 = 1.0864 */
+  font-size: 2.25rem; /* 40.5 / 18 = */
+  line-height: 2.444rem; /* 44 / 18 = 2.444 */
 }
 h2 {
-  font-size: 1.5em; /* 27 / 18 = 1.5 */
-  line-height: 1.222em; /* 33 / 27 = 1.222 */
+  font-size: 1.5rem; /* 27 / 18 = 1.5 */
+  line-height: 1.833rem; /* 33 / 18 = 1.222 */
 }
 
 /* Layout Styles */
