@@ -8,9 +8,29 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* Begin site styles below */
 
-h1 {
-  color: red;
+/* Base Styles */
+html {
+  font-size: 1.125em; /* 18 / 16 = 1.125em */
+  line-height: 1.222em; /* 22 / 18 = 1.222em */
 }
+
+h1 {
+  font-size: 2.25em; /* 40.5 / 18 = 2.25 */
+  line-height: 1.0864em; /* 44 / 40.5 = 1.0864 */
+}
+h2 {
+  font-size: 1.5em; /* 27 / 18 = 1.5 */
+  line-height: 1.222em; /* 33 / 27 = 1.222 */
+}
+
+/* Layout Styles */
+
+/* Modular Styles */
+
+/* State Styles */
+
+
+
 
 /* CSS Pseudo-Code */
 
