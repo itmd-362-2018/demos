@@ -4,3 +4,8 @@ $('#clicker').on('click',
     e.preventDefault();
   }
 );
+$('#contact-form').on('submit',
+  function() {
+    console.log('The form was submitted.');
+  }
+);
