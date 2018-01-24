@@ -4,6 +4,12 @@ $('#clicker').on('click',
     e.preventDefault();
   }
 );
+$('#show').on('click',
+  function(e) {
+    $('#password').attr('type', 'text');
+    e.preventDefault();
+  }
+);
 $('#contact-form').on('submit',
   function() {
     console.log('The form was submitted.');
