@@ -13,5 +13,7 @@ $('#show').on('click',
 $('#contact-form').on('submit',
   function() {
     console.log('The form was submitted.');
+    $(this).remove();
+    $('body').append('<h1>Thank You for Your Email Address</h1>');
   }
 );
