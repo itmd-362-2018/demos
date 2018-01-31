@@ -191,6 +191,20 @@ h2 {
   line-height: 1.222em; /* 33 / 27 = 1.222 */
 }
 
+label,
+input {
+  display: block;
+}
+
+input {
+  border: 0;
+  line-height: 1;
+  padding: 13px;
+  background: #DDD;
+}
+
+
+
 /* Layout Styles */
 
 /* Modular Styles */
