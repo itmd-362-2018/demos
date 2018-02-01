@@ -197,10 +197,20 @@ input {
 }
 
 input {
+  box-sizing: border-box;
+  width: 100%;
   border: 0;
   line-height: 1;
   padding: 13px;
   background: #DDD;
+}
+label,
+input {
+  margin-bottom: 22px;
+}
+input[type="submit"] {
+  width: 50%;
+  float: right;
 }
 
 
