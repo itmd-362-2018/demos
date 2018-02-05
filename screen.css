@@ -195,13 +195,29 @@ ul {
   background: red;
   border: 1px solid red;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "a b c"
+                       "d d d"
+                       "e . .";
+  grid-template-rows: 8em 8em 8em;
 }
 li {
   background: yellow;
-  text-align: center;
 }
-
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
+.e {
+  grid-area: e;
+}
 footer {
   clear: both;
 }
