@@ -191,6 +191,21 @@ h2 {
   line-height: 1.222em; /* 33 / 27 = 1.222 */
 }
 
+ul {
+  background: red;
+  border: 1px solid red;
+}
+li {
+  background: yellow;
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+
+footer {
+  clear: both;
+}
+
 label,
 input {
   display: block;
