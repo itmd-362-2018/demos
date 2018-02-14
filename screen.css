@@ -234,15 +234,30 @@ input[type="submit"] {
 }
 
 html {
-  color: #707070;
+  background: #222;
+  color: #ddd;
 }
 
-a {
+a,
+input {
   color: #37ced0;
 }
+
+input::placeholder {
+  color: #37ced0;
+  opacity: 0.7;
+}
+
 input[type="submit"] {
   background: #37ced0;
+  color: #222;
 }
+
 .inputs li {
-  background: #b3b3b3;
+  /* border: 1px solid #444; */
+  background: #3F3F3F;
+}
+
+.inputs .submit {
+  border: 0;
 }
