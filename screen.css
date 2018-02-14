@@ -261,3 +261,13 @@ input[type="submit"] {
 .inputs .submit {
   border: 0;
 }
+
+/* State Styles */
+
+.js input[type="submit"] {
+  display: none;
+}
+
+.js input[type="submit"].show {
+  display: block;
+}
