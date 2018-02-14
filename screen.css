@@ -226,10 +226,23 @@ input[type="submit"] {
 .inputs li {
   padding: 0.611em; /* 11 / 18 = 0.6111; (22 - 13) = 9 / 18 = 0.5 */
   margin-bottom: 0.611em; /* 11 / 18 = 0.6111 */
-  background: #CCC;
   border-radius: 0.2em;
 }
 .inputs .submit {
   padding-right: 0;
   background: inherit;
+}
+
+html {
+  color: #707070;
+}
+
+a {
+  color: #37ced0;
+}
+input[type="submit"] {
+  background: #37ced0;
+}
+.inputs li {
+  background: #b3b3b3;
 }
