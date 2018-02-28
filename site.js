@@ -12,5 +12,7 @@ $('#email').on('keyup', function(){
   }
   if((email.pat).test(email.val)) {
     $('input[type="submit"]').addClass('show');
+  } else {
+    $('input[type="submit"]').removeClass('show');
   }
 });
