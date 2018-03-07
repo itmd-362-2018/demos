@@ -18,6 +18,8 @@ $('.inputs li').on('click', function() {
 $('#servings').after('<a id="more" href="#null">+</a>');
 $('#servings').before('<a id="less" href="#null">-</a>');
 
+
+/* TODO: Don't let the <input> take focus; shows keyboard, defeating the whole purpose */
 $('#more').on('click', function(e) {
   var current_value = $('#servings').val();
   var new_value = parseInt(current_value, 10) + 1;
