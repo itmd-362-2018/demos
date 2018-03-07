@@ -261,3 +261,19 @@ input[type="submit"] {
 .inputs .submit {
   border: 0;
 }
+
+/* Stepper Styles */
+input#servings {
+  display: inline-block;
+  width: 3em;
+  text-align: center;
+}
+.inputs a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  background: #37ced0;
+  color: #222;
+  border-radius: 100%;
+  padding: 11px 22px;
+}
