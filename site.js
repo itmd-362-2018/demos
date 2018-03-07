@@ -15,8 +15,8 @@ $('.inputs li').on('click', function() {
 /* Add stepper elements */
 /* TODO: Make sure these controls are accessible */
 /* TODO: Watch focus on stepper click events; form submits accidentally */
-$('#servings').before('<a id="more" href="#null">+</a>');
-$('#servings').after('<a id="less" href="#null">-</a>');
+$('#servings').after('<a id="more" href="#null">+</a>');
+$('#servings').before('<a id="less" href="#null">-</a>');
 
 $('#more').on('click', function(e) {
   var current_value = $('#servings').val();
