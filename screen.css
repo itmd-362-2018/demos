@@ -261,17 +261,3 @@ input[type="submit"] {
 .inputs .submit {
   border: 0;
 }
-
-/* State Styles */
-
-.js input[type="submit"] {
-  opacity: 0;
-}
-
-.js input[type="submit"].show {
-  opacity: 1;
-}
-
-.fx input[type="submit"] {
-  transition: opacity 0.8s;
-}
