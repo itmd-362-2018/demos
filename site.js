@@ -18,6 +18,7 @@ $('#servings').after('<a id="more" href="#null">+</a>');
 $('#servings').before('<a id="less" href="#null">-</a>');
 
 
+/* TODO: DRY up the repetition on these event handlers */
 $('#more').on('click', function(e) {
   var current_value = $('#servings').val();
   var new_value = parseInt(current_value, 10) + 1;
