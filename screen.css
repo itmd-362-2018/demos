@@ -280,3 +280,12 @@ input#servings {
   text-decoration: none;
   width: 1.8333333333em;
 }
+
+.options {
+  display: flex;
+}
+
+.options .selected {
+  background: #EEE;
+  color: #222;
+}
