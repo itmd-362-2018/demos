@@ -14,16 +14,16 @@ $('.inputs li').on('click', function() {
 /* Create steppers for servings */
 /* Add stepper elements */
 /* TODO: Make sure these controls are accessible */
-/* TODO: Watch focus on stepper click events; form submits accidentally */
 $('#servings').after('<a id="more" href="#null">+</a>');
 $('#servings').before('<a id="less" href="#null">-</a>');
 
 
-/* TODO: Don't let the <input> take focus; shows keyboard, defeating the whole purpose */
 $('#more').on('click', function(e) {
   var current_value = $('#servings').val();
   var new_value = parseInt(current_value, 10) + 1;
   $('#servings').val(new_value);
+  e.stopPropagation();
+  e.preventDefault();
 });
 
 $('#less').on('click', function(e) {
@@ -33,4 +33,6 @@ $('#less').on('click', function(e) {
     new_value = 0;
   }
   $('#servings').val(new_value);
+  e.stopPropagation();
+  e.preventDefault();
 });
