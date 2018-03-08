@@ -42,6 +42,10 @@ $('#less').on('click', function(e) {
 
 $('#size').after('<ul class="options"></ul>');
 $('#size option').each(function() {
-  var text = $(this).text();
-  $('.options').append('<li><a class="option" href="#null" id="'+text+'">'+text+'</a></li>');
+  var opt = {
+    text: $(this).text(),
+    val: $(this).val()
+  }
+  $('.options').append('<li><a class="option" href="#null" id="'+opt.val+'">'+opt.text+'</a></li>');
+});
 });
