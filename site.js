@@ -48,4 +48,13 @@ $('#size option').each(function() {
   }
   $('.options').append('<li><a class="option" href="#null" id="'+opt.val+'">'+opt.text+'</a></li>');
 });
+
+$('.option').on('click', function(e) {
+  var id = $(this).attr('id');
+  $('.option').removeClass('selected');
+  $(this).addClass('selected');
+  $('#size option').removeAttr('selected'); // Remove existing `selected` attributes
+  $('#size option[value="'+id+'"]').attr('selected','selected'); // Add `selected` attribute onto the chosen option
+  e.stopPropagation();
+  e.preventDefault();
 });
