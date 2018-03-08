@@ -269,11 +269,14 @@ input#servings {
   text-align: center;
 }
 .inputs a {
+  line-height: 1.6666666667em; /* 30 / 18 = 1.6666666667 -- this is eyeballed to center + and - */
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
   background: #37ced0;
   color: #222;
-  border-radius: 100%;
-  padding: 11px 22px;
+  text-align: center;
+  height: 1.8333333333em; /* 33 / 18 = 1.8333333333 -- line and a half */
+  width: 1.8333333333em;
+  border-radius: 50%; /* 50% is enough to make a circle */
 }
