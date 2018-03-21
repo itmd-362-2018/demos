@@ -11,3 +11,15 @@ setTimeout(loadFX, 500);
 $('.inputs li').on('click', function() {
   $(this).find('input').focus();
 });
+
+$('#zip').on('keyup', function(e) {
+  var zip = $(this).val();
+  if (zip.length === 5) {
+    console.log('We have a valid ZIP');
+    $.get('http://api.zippopotam.us/us/' + zip, function(data) {
+      $('#city').val(data.places[0]['place name']);
+      $('#state').val(data.places[0]['state abbreviation']);
+    }
+    );
+  }
+});
