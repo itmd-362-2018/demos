@@ -261,3 +261,7 @@ input[type="submit"] {
 .inputs .submit {
   border: 0;
 }
+
+label b {
+  color: red;
+}

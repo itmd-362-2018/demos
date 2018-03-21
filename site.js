@@ -17,11 +17,19 @@ $('#zip').on('keyup', function(e) {
   var zip = $(this).val();
   if (zip.length === 5) {
     console.log("Looks like a valid ZIP to me!");
-    $.get('http://api.zippopotam.us/us/' + zip,
-      function(data){
-        $('#city').val(data.places[0]["place name"]);
-        $('#state').val(data.places[0]["state abbreviation"]);
+    $('label b').remove();
+    $.ajax({
+      url: 'http://api.zippopotam.us/us/' + zip,
+      statusCode: {
+        200: function(data) {
+          $('#city').val(data.places[0]["place name"]);
+          $('#state').val(data.places[0]["state abbreviation"]);
+        },
+        404: function() {
+          $('label[for="zip"]').append(' <b>Are you sure about that ZIP code?</b>');
+        }
       }
+    }
     );
   }
 });
