@@ -35,7 +35,7 @@ $('#zip').on('keyup', function(e) {
   }
 });
 
-$('.button').on('click', function(e) {
+$('#primary').on('click', '.button', function(e) {
   var destination = $(this).attr('href');
   console.log(destination);
   // load the contents of the next step with AJAX
