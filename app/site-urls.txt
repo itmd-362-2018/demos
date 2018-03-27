@@ -1,0 +1,49 @@
+# Process: Booking seats for a concert (one-off)
+
+1. Find the event
+/
+
+2. Show event details
+/event/26/
+/event/judas-priest/
+
+2. Choose date time (recurring?) NOPE
+
+3. Specify number of seats
+
+/event/:slug/specify-guests
+
+
+4. Choose location of seats (best availability? cheapest?)
+
+/event/:slug/choose-seats
+
+
+
+5. Confirm order
+
+/event/:slug/confirm
+
+/confirm
+
+6. Checkout
+
+/checkout
+
+
+
+
+
+
+/
+
+/events/
+
+/events/:slug
+
+/events/:slug/specify-guests
+/events/:slug/choose-seats
+
+/account/ (login or create)
+/account/confirm
+/account/checkout
