@@ -19,7 +19,7 @@ $('#zip').on('keyup', function(e) {
     console.log("Looks like a valid ZIP to me!");
     $('label b').remove();
     $.ajax({
-      url: 'http://api.zippopotam.us/us/' + zip,
+      url: '//api.zippopotam.us/us/' + zip,
       statusCode: {
         200: function(data) {
           $('#city').val(data.places[0]["place name"]);
