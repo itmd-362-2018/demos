@@ -1,3 +1,4 @@
+console.log("OMG JavaScript");
 // Clicking anywhere in the li focuses the child <input>
 $('html').removeClass('nojs').addClass('js');
 
@@ -32,4 +33,12 @@ $('#zip').on('keyup', function(e) {
     }
     );
   }
+});
+
+$('.button').on('click', function(e) {
+  var destination = $(this).attr('href');
+  console.log(destination);
+  // load the contents of the next step with AJAX
+  $('#primary').load(destination + ' #primary > *');
+  e.preventDefault();
 });

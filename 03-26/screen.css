@@ -265,3 +265,10 @@ input[type="submit"] {
 label b {
   color: red;
 }
+
+.progress {
+  color: #666;
+}
+.active {
+  color: #BBB;
+}
