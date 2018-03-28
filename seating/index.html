@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+<head>
+  <title>Choose Your Seats</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet" />
+  <link rel="stylesheet" media="screen" href="screen.css" />
+  <link rel="stylesheet" media="screen" href="#//basehold.it/22" />
+</head>
+<body>
+  <main id="primary">
+    <h1>Seat Selection</h1>
+    <p class="accessible-description">
+      The theater seats 25 people, in five rows of five seats each. Row A is closest to the front
+      of the theater, and row E is closest to the back. Seat 1 in each row is on the lefthand side
+      of the theater, facing the front, and seat 5 is on the righthand side.
+    </p>
+    <figure class="seating-chart">
+      <figcaption>
+        An interactive seating chart showing available seats.
+        <a class="access" href="#seat-selection">Skip to the form to enter seats manually</a>.
+      </figcaption>
+      <h2 class="stage">Stage</h2>
+      <ol class="rows">
+        <li class="row">
+          <h3>Row A</h3>
+          <ol class="seats">
+            <li><a href="#a1">A1</a></li>
+            <li><a href="#a2">A2</a></li>
+            <li><a href="#a3">A3</a></li>
+            <li><a href="#a4">A4</a></li>
+            <li><a href="#a5">A5</a></li>
+          </ol>
+        </li>
+        <li class="row">
+          <h3>Row B</h3>
+          <ol class="seats">
+            <li><a href="#b1">B1</a></li>
+            <li><a href="#b2">B2</a></li>
+            <li><a href="#b3">B3</a></li>
+            <li><a href="#b4">B4</a></li>
+            <li><a href="#b5">B5</a></li>
+          </ol>
+        </li>
+        <li class="row">
+          <h3>Row C</h3>
+          <ol class="seats">
+            <li><a href="#c1">C1</a></li>
+            <li><a href="#c2">C2</a></li>
+            <li><a href="#c3">C3</a></li>
+            <li><a href="#c4">C4</a></li>
+            <li><a href="#c5">C5</a></li>
+          </ol>
+        </li>
+        <li class="row">
+          <h3>Row D</h3>
+          <ol class="seats">
+            <li><a href="#d1">D1</a></li>
+            <li><a href="#d2">D2</a></li>
+            <li><a href="#d3">D3</a></li>
+            <li><a href="#d4">D4</a></li>
+            <li><a href="#d5">D5</a></li>
+          </ol>
+        </li>
+        <li class="row">
+          <h3>Row E</h3>
+          <ol class="seats">
+            <li><a href="#e1">E1</a></li>
+            <li><a href="#e2">E2</a></li>
+            <li><a href="#e3">E3</a></li>
+            <li><a href="#e4">E4</a></li>
+            <li><a href="#e5">E5</a></li>
+          </ol>
+        </li>
+    </figure>
+    <form id="seat-selection" method="get" action="#null">
+      <p class="accessible-description">
+        All seats are currently available. Enter the seats you want by letter and number,
+        separating each additional seat by a comma.
+      </p>
+      <ol class="inputs">
+        <li>
+          <label for="seats">Seats</label>
+          <input name="seats" id="seats" type="text" placeholder="b2,b3"/>
+        </li>
+        <li class="submit">
+          <input type="submit" name="submit" value="Reserve Seats" />
+        </li>
+      </ol>
+    </form>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
