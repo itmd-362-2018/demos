@@ -10,3 +10,10 @@ setTimeout(loadFX, 500);
 $('.inputs li').on('click', function() {
   $(this).find('input').focus();
 });
+
+$('.seats a').on('click', function(e) {
+  var selected = $(this).attr('href').substring(1);
+  $(this).toggleClass('selected');
+  console.log(selected);
+  e.preventDefault();
+})
