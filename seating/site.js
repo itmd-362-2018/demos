@@ -26,3 +26,22 @@ $('.seats a').on('click', function(e) {
   $('#seats').val(selected.join(","));
   e.preventDefault();
 })
+
+$('#seat-selection').on('submit', function(e){
+  var selected = [];
+  // Let jQuery race through all the submitted form data
+  var form_data = $(this).serializeArray();
+  // Then, walk through each item in the form data array
+  $.each(form_data, function(i,field){
+    // Start building a switch statement to do data checking, etc.
+    // We'll build this out more next week
+    switch(field.name) {
+      case 'seats':
+        selected = field.value.split(",");
+        console.log(selected);
+        break;
+    }
+  });
+  // console.log(form_data);
+  e.preventDefault();
+});
