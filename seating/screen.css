@@ -300,6 +300,7 @@ figure h2 {
   text-decoration: none;
 }
 .seats a.unavailable {
+  color: #666;
   background: #333;
 }
 .seats a.selected {
