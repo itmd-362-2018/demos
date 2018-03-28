@@ -12,8 +12,17 @@ $('.inputs li').on('click', function() {
 });
 
 $('.seats a').on('click', function(e) {
-  var selected = $(this).attr('href').substring(1);
+  var selected = [];
+  // Toggle the class for whether a seat is selected or not
   $(this).toggleClass('selected');
+  // THEN, run through everything with a selected class
+  // and build up the array of selected seats
+  // TODO: double-check the `.rows` context argument
+  $('.selected','.rows').each(function(){
+    var seat = $(this).attr('href').substring(1);
+    // Add the current seat in the set to the `selected` array
+    selected.push(seat);
+  })
   console.log(selected);
   e.preventDefault();
 })
