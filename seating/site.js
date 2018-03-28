@@ -22,7 +22,7 @@ $('.seats a').on('click', function(e) {
     var seat = $(this).attr('href').substring(1);
     // Add the current seat in the set to the `selected` array
     selected.push(seat);
-  })
-  console.log(selected);
+  });
+  $('#seats').val(selected.join(","));
   e.preventDefault();
 })
