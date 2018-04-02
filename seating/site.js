@@ -25,7 +25,17 @@ $('.seats a').on('click', function(e) {
   });
   $('#seats').val(selected.join(","));
   e.preventDefault();
-})
+});
+
+$('#seats').on('keyup', function(e) {
+  var seats = $(this).val().replace(/\s/g, '');
+  var selected = seats.split(",");
+  $('.seats a').removeClass('selected');
+  $.each(selected, function(i,v) {
+    $('.seats a[href="#'+v+'"]').addClass('selected');
+    console.log('.seats a[href="#'+v+'"]');
+  });
+});
 
 $('#seat-selection').on('submit', function(e){
   var selected = [];
