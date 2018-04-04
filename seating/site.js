@@ -14,7 +14,7 @@ $('.inputs li').on('click', function() {
 // Prepare the seats so that some are unavailable
 var unavailable = [ "a1", "a2", "a3", "a4", "a5", "b3", "b4", "c1", "c2" ];
 $.each(unavailable, function(i,v) {
-  $('.seats a[href="#'+v+'"]').addClass('unavailable').attr('title','Seat unavailable.');
+  $('.seats a[href="#'+v+'"]').addClass('unavailable').prepend('<span>Seat unavailable.</span> ');
 });
 
 $('.seats a').on('click', function(e) {
