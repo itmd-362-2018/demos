@@ -17,8 +17,12 @@ $.each(unavailable, function(i,v) {
   $('.seats a[href="#'+v+'"]').addClass('unavailable');
 });
 
-$('.seats a:not(.unavailable)').on('click', function(e) {
+$('.seats a').on('click', function(e) {
   var selected = [];
+  e.preventDefault();
+  if ($(this).hasClass('unavailable')) {
+    return;
+  }
   // Toggle the class for whether a seat is selected or not
   $(this).toggleClass('selected');
   // THEN, run through everything with a selected class
@@ -30,7 +34,6 @@ $('.seats a:not(.unavailable)').on('click', function(e) {
     selected.push(seat);
   });
   $('#seats').val(selected.join(","));
-  e.preventDefault();
 });
 
 $('#seats').on('keyup', function(e) {
