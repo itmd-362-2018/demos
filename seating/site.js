@@ -11,6 +11,12 @@ $('.inputs li').on('click', function() {
   $(this).find('input').focus();
 });
 
+// Prepare the seats so that some are unavailable
+var unavailable = [ "a1", "a2", "a3", "a4", "a5", "b3", "b4", "c1", "c2" ];
+$.each(unavailable, function(i,v) {
+  $('.seats a[href="#'+v+'"]').addClass('unavailable');
+});
+
 $('.seats a').on('click', function(e) {
   var selected = [];
   // Toggle the class for whether a seat is selected or not

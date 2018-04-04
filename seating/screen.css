@@ -302,6 +302,7 @@ figure h2 {
 .seats a.unavailable {
   color: #666;
   background: #333;
+  cursor: default;
 }
 .seats a.selected {
   background: rgba(55,206,208,1); /* #37ced0 */
