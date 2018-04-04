@@ -278,8 +278,9 @@ figure h2 {
   text-align: center;
 }
 /* Visually conceal row heading labels */
-.row h3 {
-  left: -10000px;
+.row h3,
+.unavailable span {
+  left: -100vw;
   position: absolute;
 }
 .rows {
