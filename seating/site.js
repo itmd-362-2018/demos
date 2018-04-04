@@ -17,7 +17,7 @@ $.each(unavailable, function(i,v) {
   $('.seats a[href="#'+v+'"]').addClass('unavailable');
 });
 
-$('.seats a').on('click', function(e) {
+$('.seats a:not(.unavailable)').on('click', function(e) {
   var selected = [];
   // Toggle the class for whether a seat is selected or not
   $(this).toggleClass('selected');
