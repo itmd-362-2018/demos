@@ -41,7 +41,7 @@ $('#seats').on('keyup', function(e) {
   var selected = seats.split(",");
   $('.seats a').removeClass('selected');
   $.each(selected, function(i,v) {
-    $('.seats a[href="#'+v+'"]').addClass('selected');
+    $('.seats a[href="#'+v+'"]:not(.unavailable)').addClass('selected');
     console.log('.seats a[href="#'+v+'"]');
   });
 });
