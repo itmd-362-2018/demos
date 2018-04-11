@@ -23,6 +23,7 @@ $.each(unavailable, function(i,v) {
 
 $('.seats a').on('click', function(e) {
   var selected = [];
+  var seats;
   e.preventDefault();
   if ($(this).hasClass('unavailable')) {
     return;
@@ -37,7 +38,9 @@ $('.seats a').on('click', function(e) {
     // Add the current seat in the set to the `selected` array
     selected.push(seat);
   });
-  $('#seats').val(selected.join(","));
+  seats = selected.join(",");
+  $('#seats').val(seats);
+  docCookies.setItem('seats',seats);
 });
 
 $('#seats').on('keyup', function(e) {
