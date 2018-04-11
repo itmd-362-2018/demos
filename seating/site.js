@@ -69,7 +69,8 @@ $('#seat-selection').on('submit', function(e){
     }
   });
   // console.log(form_data);
-  // e.preventDefault();
+  e.preventDefault();
+  window.location.href = $(this).attr('action');
 });
 
 if (docCookies.hasItem('seats')) {
