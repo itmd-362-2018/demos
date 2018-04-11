@@ -74,5 +74,29 @@ $('#seat-selection').on('submit', function(e){
 });
 
 if (docCookies.hasItem('seats')) {
-  $('#confirmation').append('<b>They are seats ' + docCookies.getItem('seats') + '.</b>');
+
+  var invoice = {
+    seats: docCookies.getItem('seats'),
+    count: docCookies.getItem('seats').split(",").length,
+    price: +$('#price').text(),
+    fee: +$('#fee').text(),
+    subtotal: 0,
+    total: 0
+  };
+  $('#confirmation').append('<b>They are seats ' + invoice.seats + '.</b>');
+
+  invoice.subtotal = total(invoice.price,invoice.count);
+  invoice.total = invoice.subtotal + invoice.fee;
+
+  $('#fee').prepend("$");
+  $('#price').prepend("$");
+  $('#tickets').html(invoice.count + " Tickets × ");
+  $('#subtotal').html("$" + invoice.subtotal);
+  $('#total').html("$" + invoice.total);
+
+  function total(price,count) {
+    return price * count;
+  }
+
+
 }
