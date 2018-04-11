@@ -69,5 +69,9 @@ $('#seat-selection').on('submit', function(e){
     }
   });
   // console.log(form_data);
-  e.preventDefault();
+  // e.preventDefault();
 });
+
+if (docCookies.hasItem('seats')) {
+  $('#confirmation').append('<b>They are seats ' + docCookies.getItem('seats') + '.</b>');
+}
