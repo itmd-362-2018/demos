@@ -43,7 +43,12 @@ $('#less').on('click', function(e) {
 
 /* Create buttons from short <select> */
 
-if(coinToss()) {
+if(!docCookies.hasItem('drink-test')) {
+  docCookies.setItem('drink-test', coinToss());
+  console.log(docCookies.getItem('drink-test'));
+}
+
+if(docCookies.getItem('drink-test') === "true") {
   $('#size').after('<ul class="options"></ul>');
   $('#size option').each(function() {
     var opt = {
