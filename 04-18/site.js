@@ -67,12 +67,13 @@ function coinToss() {
   return condition;
 }
 
-var counter = { true: 0, false: 0 };
-for (var i = 0; i < 1000000; i++) {
-  if(coinToss()) {
-    counter.true += 1;
-  } else {
-    counter.false += 1;
-  }
-}
-console.log(counter);
+// Test for fairness of coinToss()
+// var counter = { true: 0, false: 0 };
+// for (var i = 0; i < 1000000; i++) {
+//  if(coinToss()) {
+//    counter.true += 1;
+//  } else {
+//    counter.false += 1;
+//  }
+// }
+// console.log(counter);
