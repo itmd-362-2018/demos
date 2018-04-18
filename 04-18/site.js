@@ -60,6 +60,7 @@ if(coinToss()) {
   });
   // Hide the default control
   $('#size').addClass('is-hidden');
+  $('#test').val('drink-enhanced');
 }
 
 
