@@ -289,3 +289,7 @@ input#servings {
   background: #EEE;
   color: #222;
 }
+
+.is-hidden {
+  display: none;
+}

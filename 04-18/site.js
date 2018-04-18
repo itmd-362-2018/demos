@@ -40,24 +40,29 @@ $('#less').on('click', function(e) {
 
 /* Create buttons from short <select> */
 
-$('#size').after('<ul class="options"></ul>');
-$('#size option').each(function() {
-  var opt = {
-    text: $(this).text(),
-    val: $(this).val()
-  }
-  $('.options').append('<li><a class="option" href="#null" data-value="'+opt.val+'">'+opt.text+'</a></li>');
-});
+if(coinToss()) {
+  $('#size').after('<ul class="options"></ul>');
+  $('#size option').each(function() {
+    var opt = {
+      text: $(this).text(),
+      val: $(this).val()
+    }
+    $('.options').append('<li><a class="option" href="#null" data-value="'+opt.val+'">'+opt.text+'</a></li>');
+  });
+  $('.option').on('click', function(e) {
+    var value = $(this).data('value');
+    $('.option').removeClass('selected');
+    $(this).addClass('selected');
+    $('#size option').removeAttr('selected'); // Remove existing `selected` attributes
+    $('#size option[value="'+value+'"]').attr('selected','selected'); // Add `selected` attribute onto the chosen option
+    e.stopPropagation();
+    e.preventDefault();
+  });
+  // Hide the default control
+  $('#size').addClass('is-hidden');
+}
 
-$('.option').on('click', function(e) {
-  var value = $(this).data('value');
-  $('.option').removeClass('selected');
-  $(this).addClass('selected');
-  $('#size option').removeAttr('selected'); // Remove existing `selected` attributes
-  $('#size option[value="'+value+'"]').attr('selected','selected'); // Add `selected` attribute onto the chosen option
-  e.stopPropagation();
-  e.preventDefault();
-});
+
 
 function coinToss() {
   var condition = false;
